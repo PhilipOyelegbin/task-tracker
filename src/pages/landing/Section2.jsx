@@ -1,5 +1,5 @@
 import { Heading, HStack, Image, Link as ChakraLink, VStack, Wrap } from "@chakra-ui/react";
-import {} from '@emotion/react';
+import {FaArrowRight} from 'react-icons/fa';
 import react from '../../assets/react.svg';
 
 const Section2 = () => {
@@ -41,7 +41,7 @@ const Section2 = () => {
                     <p style={{fontSize: "18px"}}>Gain Hidden Insights Into The Progress And Profitability Of Your Projects With Real-Time Budget And Resource Tracking. Adjust Schedules And Workload Allocation To Quickly Pivot And Reach Goals.</p>
                     <HStack justify="space-between">
                         <p>Get Started</p>
-                        <Image src="" />
+                        <FaArrowRight/>
                     </HStack>
                 </VStack>
                 <VStack w={["full", "full", "60%"]}>
@@ -57,7 +57,7 @@ const Section2 = () => {
                     <p style={{fontSize: "18px"}}>Gain Hidden Insights Into The Progress And Profitability Of Your Projects With Real-Time Budget And Resource Tracking. Adjust Schedules And Workload Allocation To Quickly Pivot And Reach Goals.</p>
                     <HStack justify="space-between">
                         <p>Get Started</p>
-                        <Image src="" />
+                        <FaArrowRight/>
                     </HStack>
                 </VStack>
             </Wrap>
