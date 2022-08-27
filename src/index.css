@@ -45,6 +45,10 @@ nav {
   z-index: 30;
 }
 
+.menu-is-active {
+  border-bottom: 2px solid;
+}
+
 .active {  
   right: 0;
 }

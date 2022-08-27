@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri'
-import {Flex, Heading, HStack, Image, Stack} from '@chakra-ui/react';
+import {border, Flex, Heading, HStack, Image, Stack} from '@chakra-ui/react';
 import react from '../assets/react.svg';
 import { useState } from 'react';
 
@@ -24,10 +24,10 @@ const Nav = () => {
                 <Image src={react} w="10" h="10"/>
                 <Heading display={["none", "none", "none", "block"]}>TASKGENICS</Heading>
             </HStack>
-            <Flex className={`menu-container ${show && "active"}`}>
+            <Flex className={`menu-container ${show ? "active" : undefined}`}>
                 {menuContent?.map(obj => {
                     return (
-                        <NavLink key={obj.id} style={{margin: "0 auto"}} to={obj.link} onClick={handleToggle}>{obj.label}</NavLink>
+                        <NavLink key={obj.id} className={({isActive}) => isActive ? "menu-is-active" : undefined} style={{margin: "0 auto"}} to={obj.link} onClick={handleToggle}>{obj.label}</NavLink>
                     )
                 })}
             </Flex>

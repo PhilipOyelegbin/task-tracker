@@ -39,7 +39,7 @@ const Section2 = () => {
                 <VStack w={["full", "full", "35%"]}>
                     <Heading fontSize="24px">Get The Reports You Need</Heading>
                     <p style={{fontSize: "18px"}}>Gain Hidden Insights Into The Progress And Profitability Of Your Projects With Real-Time Budget And Resource Tracking. Adjust Schedules And Workload Allocation To Quickly Pivot And Reach Goals.</p>
-                    <HStack justify="space-between">
+                    <HStack alignSelf="self-start" justifyContent="space-between"minW="100%">
                         <p>Get Started</p>
                         <FaArrowRight/>
                     </HStack>
@@ -55,7 +55,7 @@ const Section2 = () => {
                 <VStack w={["full", "full", "35%"]}>
                     <Heading fontSize="24px">Collaborative To The Core</Heading>
                     <p style={{fontSize: "18px"}}>Gain Hidden Insights Into The Progress And Profitability Of Your Projects With Real-Time Budget And Resource Tracking. Adjust Schedules And Workload Allocation To Quickly Pivot And Reach Goals.</p>
-                    <HStack justify="space-between">
+                    <HStack alignSelf="self-start" justify="space-between" minW="100%">
                         <p>Get Started</p>
                         <FaArrowRight/>
                     </HStack>
