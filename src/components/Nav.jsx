@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri'
-import {border, Flex, Heading, HStack, Image, Stack} from '@chakra-ui/react';
+import {Button, Flex, Heading, HStack, Image} from '@chakra-ui/react';
 import react from '../assets/react.svg';
 import { useState } from 'react';
 
@@ -34,8 +34,8 @@ const Nav = () => {
         </HStack>
 
         <HStack className='nav-btn'>
-            <NavLink className="nav-link" to="/login">Login</NavLink>
-            <NavLink style={{background: "gray", padding: "10px", borderRadius: "10px"}} to="/signup">Start For Free</NavLink>
+        <Button colorScheme='orange' variant='ghost' size='sm'><NavLink className="nav-link" to="/login">Login</NavLink></Button>
+            <Button colorScheme='orange' variant='solid' size='sm'><NavLink to="/signup">Start For Free</NavLink></Button>
             <RiMenu3Fill className={`${show ? "hidden" : "show"}`} fontSize="30px" onClick={handleToggle}/>
             <RiCloseFill className={`${show ? "show" : "hidden"}`} fontSize="30px" onClick={handleToggle}/>
         </HStack>

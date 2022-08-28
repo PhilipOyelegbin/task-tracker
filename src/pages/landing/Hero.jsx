@@ -1,4 +1,4 @@
-import { Heading, HStack, Image, VStack, Link as ChakraLink } from "@chakra-ui/react";
+import { Heading, HStack, Image, VStack, Link as ChakraLink, Button, textDecoration } from "@chakra-ui/react";
 import react from '../../assets/react.svg'
 
 const Hero = () => {
@@ -7,7 +7,7 @@ const Hero = () => {
         <VStack width={["full", "full", "40%"]}>
             <Heading>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, aliquam.</Heading>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, labore? Architecto maxime non expedita, assumenda impedit numquam! Accusamus, omnis vel!</p>
-            <ChakraLink bg="blackAlpha.600" alignSelf={["self-start", "center"]} p={["10px 20px", "10px 50px"]} textAlign="center" rounded="md" href="">Get Started For Free</ChakraLink>
+            <Button colorScheme='orange' variant='solid' size='sm' alignSelf={["self-start", "center"]} p={["10px 20px", "10px 50px"]}><ChakraLink textAlign="center" _hover="none" href="">Get Started For Free</ChakraLink></Button>
         </VStack>
         <VStack width="60%" display={["none", "none", "block"]}>
             <Image src={react} mx="auto" w="300" h="300"></Image>

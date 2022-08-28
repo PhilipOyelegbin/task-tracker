@@ -1,4 +1,4 @@
-import { Heading, HStack, Image, Link as ChakraLink, VStack, Wrap } from "@chakra-ui/react";
+import { Button, Heading, HStack, Image, Link as ChakraLink, VStack, Wrap } from "@chakra-ui/react";
 import {FaArrowRight} from 'react-icons/fa';
 import react from '../../assets/react.svg';
 
@@ -61,7 +61,7 @@ const Section2 = () => {
                     </HStack>
                 </VStack>
             </Wrap>
-            <ChakraLink bg="blackAlpha.600" mb="10px" p={["10px 20px", "10px 50px"]} textAlign="center" rounded="md" href="">Learn More About The Product</ChakraLink>
+            <Button colorScheme='orange' variant='solid' size='sm' p={["10px 20px", "10px 50px"]}><ChakraLink textAlign="center" _hover="none" href="">Learn More About The Product</ChakraLink></Button>
         </VStack>
     </>
   )
