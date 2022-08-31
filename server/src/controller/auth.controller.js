@@ -42,6 +42,9 @@ exports.login=async(req,res,next)=>{
         const payload = {id:user._id,role:user.role};
         const token = sign(payload,secrete,{expiresIn:"30m"});
         const refreshToken = sign(payload,refreshSecrete,{expiresIn:"5d"});
+        user.refreshToken=refreshToken;
+        user.save();
+
         const data = buildUser(user.toObject());
         const responseData = buildResponse("Login successful",data,"user",{success:"Logged in",token,refreshToken});
         res.status(200).json(responseData);

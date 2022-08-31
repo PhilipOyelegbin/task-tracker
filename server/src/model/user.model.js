@@ -9,6 +9,10 @@ index:true
 password:{type:String,
 required:true
 },
+refreshToken:{type:String,
+    required:true,
+    default:"none"
+    },
 verified:{typpe: Boolean,
 default:false
 }

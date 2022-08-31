@@ -30,6 +30,7 @@ Mongo database will be used to model and implement the following.
 _id:        ->ObjectID
 email:      ->String
 password:   ->String
+refreshToken:->String
 verified:   ->Boolean
 createdAt:  ->Date
 upatedAt:   ->Date
