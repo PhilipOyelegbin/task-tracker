@@ -1,10 +1,10 @@
 exports.notFound=(req,res,next)=>{
-    console.log("not found called");
-    res.status(404).json({error:"Rount NOT found"});
+    const err = new Error("Route NOT found")
+     err.status= 404 ;
+     next(err);
 }
 
-exports.errorHandler=(req,res,next)=>{
-    console.log("handler called");
-    res.status(5000).json({error: "Unknown error"});
+exports.errorHandler=(err,req,res,next)=>{
+    res.status(err.status||500).json({error: err.message||"Unknown error"});
 }
 

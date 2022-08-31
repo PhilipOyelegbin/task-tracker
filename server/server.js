@@ -3,10 +3,12 @@ const dbConnect = require("./src/config/db.config");
 const { notFound, errorHandler } = require("./src/middleware/error.middleware");
 const authRoute = require("./src/route/auth.route");
 
-app.use("/api/user", authRoute);
+app.use("/api/auth", authRoute);
 
 app.use("*",notFound);
- 
+app.use(errorHandler);
+
+
 const start=async()=>{
     try {
         await dbConnect();
