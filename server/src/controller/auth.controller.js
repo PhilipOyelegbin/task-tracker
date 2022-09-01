@@ -21,6 +21,8 @@ exports.register=async(req,res,next)=>{
             password:passwordHash,
             verified:false,
         });
+        //TODO: SEND EMAIL TO user email
+        
         res.status(201).json({msg:"Account created successfully"});
     } catch (error) {
         next(error);
@@ -38,6 +40,9 @@ exports.login=async(req,res,next)=>{
         const user = await UserModel.findOne({email: email});
         if(!user)
              return next(APIError.customError("user does not exist",400) );
+
+        if(user.refreshToken !=="none")
+        return next(APIError.customError("Account has an active session, logout all session first",400));
         const verify = compareSync(password,user.password);
         if(!verify)
              return next( APIError.customError("Incorrect username or password",400));
@@ -45,14 +50,47 @@ exports.login=async(req,res,next)=>{
         const secrete = process.env.JWT_SECRET_TOKEN;
         const refreshSecrete = process.env.JWT_REFRESH_SECRET;
         const payload = {id:user._id,role:user.role};
-        const token = sign(payload,secrete,{expiresIn:"30m"});
+        const token = sign(payload,secrete,{expiresIn:"1h"});
         const refreshToken = sign(payload,refreshSecrete,{expiresIn:"5d"});
         user.refreshToken=refreshToken;
         user.save();
 
         const data = buildUser(user.toObject());
-        const responseData = buildResponse("Login successful",data,"user",{success:"Logged in",token,refreshToken});
+        const responseData = buildResponse("Login successful",data,"user",{success:"Logged in",token});
         res.status(200).json(responseData);
+    } catch (error) {
+        next(error);
+    }
+}
+
+exports.logout=async(req,res,next)=>{
+    try {
+        const user = await UserModel.findById(req.id);
+        if(!user)
+        return next(APIError.notFound("User does not exist"))
+        if(user.refreshToken==="none")
+        return next(APIError.customError("User already logged out",200));
+        user.refreshToken="none";
+        user.save();
+        const data = buildUser(user.toObject());
+        const response= buildResponse("User logged out",data,"user",{success:"Logged out successfully"});
+        res.status(200).json(response);
+    } catch (error) {
+     next(error)   
+    }
+}
+
+exports.logoutAll=async(req,res,next)=>{
+    try {
+        const user = await UserModel.findById(req.id);
+        if(!user)
+        return next(APIError.notFound("User does not exist"));
+        if(user.refreshToken ==="none")
+        return next(APIError.customError("There is not active session, login first",200))
+        user.refreshToken="none";
+        user.save();
+        res.status(200).json({success:"All session logged out successfully"});
+
     } catch (error) {
         next(error);
     }

@@ -42,7 +42,10 @@ upatedAt:   ->Date
 _id:        ->ObjectId
 creatorid:    ->ObjectId
 name:       ->String
+shortname:   ->String
+website:    ->String
 description: ->String
+category:      ->String
 Status:      ->String enum["private","public"]
 createdAt:  ->Date
 upatedAt:   ->Date

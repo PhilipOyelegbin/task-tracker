@@ -2,8 +2,10 @@ const app= require("./src/app");
 const dbConnect = require("./src/config/db.config");
 const { notFound, errorHandler } = require("./src/middleware/error.middleware");
 const authRoute = require("./src/route/auth.route");
+const workspaceRoute = require("./src/route/workspace.route");
 
 app.use("/api/auth", authRoute);
+app.use("/api/workspace", workspaceRoute);
 
 app.use("*",notFound);
 app.use(errorHandler);

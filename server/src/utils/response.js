@@ -11,3 +11,8 @@ exports.buildResponse=(msg,data, field="data",others={})=>{
     }
     return response;
 }
+
+exports.buildWorkspace=(workspaceObj)=>{
+    const {__v,creatorid,...data}= workspaceObj;
+    return data;
+}
