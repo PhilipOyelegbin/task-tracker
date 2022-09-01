@@ -4,7 +4,7 @@
  An API for todo list management.
 
 # DESCRIPTION
-This api is to allows only logged in users create and manage todo list.
+This API is to allow only logged in users create and manage todo list.
 
 # FEATURES OF THE APPLICATION
 1. Implement an authenticated methond using JWT for:
@@ -12,20 +12,21 @@ This api is to allows only logged in users create and manage todo list.
 - auth/register
 - auth/invite
 - auth/remove
+- auth/logout
 
 **Note:**
 POST auth/login and auth/register should not require authentication to allow new users register and login.
 
-2. Implement CRUD for User Model (GET, POST, PUT and DELETE) **/user**. users should not be able to delete his/her account.
+2. Implement CRUD for User Model (GET, POST, PUT and DELETE) **/user**. users should not be able to delete his/her account. User will be verified after registration by sending a verification mail.
 
 3. Implement CRUD for Workspace Model (GET, POST, PUT, and DELETE) **/workspace**, only the creator of the workspace should be able to delete the workspace, and only team members with **admin** role should be able to ***add/invite*** or ***remove*** team members from the workspace.
 
-4. Implement CRUd for Task Model (GET, POST, PUT, and delete) **/task**, all team members should be able to ***create, modify, and delete*** task.
+4. Implement CRUD for Task Model (GET, POST, PUT, and delete) **/task**, all team members should be able to ***create, modify, and delete*** task.
 
 # SCHEMA
 Mongo database will be used to model and implement the following.
 
-# USER
+## USER
 ```
 _id:        ->ObjectID
 email:      ->String
@@ -36,7 +37,7 @@ createdAt:  ->Date
 upatedAt:   ->Date
 ```
 
-# WORKSPACE
+## WORKSPACE
 ```
 _id:        ->ObjectId
 creatorid:    ->ObjectId
@@ -46,7 +47,7 @@ Status:      ->String enum["private","public"]
 createdAt:  ->Date
 upatedAt:   ->Date
 ```
-# TEAM
+## TEAM
 ```
 _id:        ->ObjectId
 workspaceid:  ->objectId
@@ -56,7 +57,7 @@ createdAt:  ->Date
 updatedAt:  ->Date
 ```
 
-# BOARD
+## BOARD
 ```
 _id:             ->ObjectId
 workspaceid:    ->ObjectId
@@ -66,7 +67,7 @@ createdAt:      ->Date
 upatedAt:       ->Date
 ```
 
-# TASK
+## TASK
 ```
 _id:            ->ObjectId
 creatorid:      ->ObjectId
@@ -76,4 +77,15 @@ description:    ->String
 status:         ->String enum["todo","inprogress","done","review","completed"]
 createdAt:      ->Date
 upatedAt:       ->Date
+```
+
+## INVITATION
+```
+_id:        ->ObjectId
+email:      ->String
+status:     ->String enum["pending","accepted"]
+workspaceid: ->ObjectId
+message:     ->String
+createdAt:   ->Date
+updatedAt:   ->Date
 ```
