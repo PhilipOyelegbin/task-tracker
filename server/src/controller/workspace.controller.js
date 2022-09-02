@@ -47,13 +47,28 @@ exports.getWorkspace=async(req,res,next)=>{
         next(error);
     }
 }
-
+exports.getWorkspaceById=async(req,res,next)=>{
+    try { 
+        const userid = req.id;
+        const id = req.query.id; 
+        const workspace = await WorkspaceModel.find({_id:id,creatorid:userid});
+        if(workspace.length===0)
+        return next(APIError.customError("No workspace Found",404)); 
+        const data =workspace.map((curr)=>{ 
+            return buildWorkspace(curr.toObject());
+        }); 
+        const response= buildResponse("Found",data,"userworkspaces");
+        res.status(200).json(response);
+    } catch (error) {
+        next(error);
+    }
+}
 exports.deleteWorkspace=async(req,res,next)=>{
     try {
         const workspaceid=req.query.workspaceid;
         if(!workspaceid)
         return next(APIError.badRequest()); 
-        const workspace = await MemberModel.findOneAndDelete().populate({path:"workspace", match:{creatorid:req.id,workspace:workspaceid}});
+        const workspace = await MemberModel.findOneAndDelete({workspace:workspaceid}).populate({path:"workspace", match:{creatorid:req.id}});
     if(!workspace)
     return next(APIError.customError("Workspace does not exist",200));
     res.status(200).json({success:"Workspace deleted successfully"});
@@ -64,7 +79,18 @@ exports.deleteWorkspace=async(req,res,next)=>{
 
 exports.updateWorkspace=async(req,res,next)=>{
 try {
-    
+    const data={};
+    if(!req.body.workspaceid)
+    return next(APIError.badRequest()); 
+    for(key in req.body){
+        data[key] = req.body[key];
+    }   
+    const workspace = await WorkspaceModel.findOneAndUpdate({_d:data.workspaceid,creatorid:req.id},{data}); 
+    if(!workspace) 
+    return next(APIError.customError("Workspace does not exist",200)); 
+    const buildData= buildWorkspace(workspace.toObject()); 
+    const response= buildResponse("Updated",buildData,"userworkspaces",{success:"Workspace updated successfully"});
+    res.status(200).json(response);
 } catch (error) {
     next(error);
 }
