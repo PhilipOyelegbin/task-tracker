@@ -1,4 +1,6 @@
 import { Button, Center, Flex, FormControl, FormLabel, Heading, HStack, Input, Text, VStack } from "@chakra-ui/react"
+import axios from "axios"
+import { useEffect, useState } from "react"
 import { FaFacebook, FaGoogle, FaLinkedin } from "react-icons/fa"
 import { Link, useNavigate } from "react-router-dom"
 
@@ -28,9 +30,9 @@ const Login = () => {
         logData();
     };
 
-    // const handleChange = (e) => {
-    //     setValues({...values, [e.target.name] : e.target.value});
-    // };
+    const handleChange = (e) => {
+        setUser({...user, [e.target.name] : e.target.value});
+    };
 
     useEffect(() => {
         document.title = "Taskgenics - Login Page"
@@ -43,11 +45,11 @@ const Login = () => {
                 <Heading alignSelf="self-start">Sign In</Heading>
                 <FormControl>
                     <FormLabel>Email Address</FormLabel>
-                    <Input variant='outline' name="email" value={user.email} onChange={(e) => e.target.value} placeholder='Enter Email' size='md' required/>
+                    <Input variant='outline' name="email" value={user.email} onChange={handleChange} placeholder='Enter Email' size='md' required/>
                 </FormControl>
                 <FormControl>
                     <FormLabel>Password</FormLabel>
-                    <Input variant='outline' name="password" value={user.password} onChange={(e) => e.target.value} placeholder='8 Characters or more' size='md' required/>
+                    <Input variant='outline' name="password" value={user.password} onChange={handleChange} placeholder='8 Characters or more' size='md' required/>
                 </FormControl>
 
                 {/* feedback message */}
