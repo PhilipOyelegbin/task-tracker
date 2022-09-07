@@ -1,0 +1,63 @@
+.newsLetter-h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: #D9D0D0;
+}
+.newsLetter-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+}
+.newsLetter-p{
+    width:50%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #D9D0D0;
+}
+.input-div{
+    display:flex;
+    gap:10px;
+    width:80%;
+    align-self: center;
+    margin: 1rem;
+
+}
+.input-div .input{
+    width:80%;
+    border: 1px solid #D9D0D0;
+    border-radius: 4px;
+    padding: 0.5rem 1rem ;
+    background-color: transparent;
+    color: black;
+    outline: none;
+}
+.input-div .button{
+    width:20%
+}
+@media (max-width:768px) {
+    .newsLetter-h1{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    .newsLetter-p{
+        margin-top: 0;
+        font-size: 0.8rem;
+        width: 80%;
+    }
+    .input-div{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-div .button{
+        width:50%;
+    }
+}
