@@ -23,7 +23,6 @@ const Signup = () => {
         {/* <img src={TGLogo} alt="TGLogo" className='signup-logo'/> */}
         <h1 className='signup-heading'>Start Your Free Trial</h1>
         <form onSubmit={(e)=>e.preventDefault()} className='reg-form'>
-        {/* <h1>Welcome to Lilies !</h1> */}
           <div className='input-box'>
             <label>First Name</label>
             <input type="text" placeholder='Enter First Name' />
