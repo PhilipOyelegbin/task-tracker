@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri'
 import {Button, Flex, Heading, HStack, Image} from '@chakra-ui/react';
-import react from '../assets/react.svg';
+import logo from '../assets/tglogo.jpg';
 import { useState } from 'react';
 
 const Nav = () => {
@@ -21,7 +21,7 @@ const Nav = () => {
     <Flex justify="space-between" p={["10px", "20px 40px"]}>
         <HStack gap="5">
             <HStack className='logo'>
-                <Image src={react} w="10" h="10"/>
+                <Image src={logo} w="10" h="10"/>
                 <Heading display={["none", "none", "none", "block"]}>TASKGENICS</Heading>
             </HStack>
             <Flex className={`menu-container ${show ? "active" : undefined}`}>
