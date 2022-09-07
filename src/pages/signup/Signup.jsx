@@ -49,7 +49,7 @@ const Signup = () => {
             <button className='signup-btn' onClick={()=>navigate('/login')}>Sign Up</button>
           </div>
           <div>
-            <p>Already have an account ? <span style={{color:'#DD6B20', cursor:'pointer', fontWeight:'bold'}} onClick={()=>navigate('/login')}>Login</span></p>
+            <p style={{fontSize: '0.9rem'}}>Already have an account ? <span style={{color:'#DD6B20', cursor:'pointer', fontWeight:'bold', fontSize: '0.9rem'}} onClick={()=>navigate('/login')}>Login</span></p>
           </div>
         </form>
       </div>
