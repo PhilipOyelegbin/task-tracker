@@ -1,0 +1,108 @@
+@font-face{
+    font-family:Inter;
+    src:url(../../Fonts/Inter[wght].ttf);
+}
+.testimonial-h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: #D9D0D0;
+}
+.testimonial-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4rem;
+    gap:20px;
+}
+.testimonial-div .v-Button{
+    display:none;
+}
+.person-div{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    gap:20px;
+}
+.testimonial-img{
+    width: 334px;
+}
+.intestimonial-div{
+    display: flex;
+    overflow:auto;
+    width: 100%;
+}
+.intestimonial-div::-webkit-scrollbar{
+    display:none;
+}
+.testimony-div{
+    width: 334px;
+}
+.testimony-div .testimony-name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 100%;
+    color: #FFFFFF;
+}
+.testimony-position{
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+.testimony{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+
+    color: #D9D0D0;
+}
+.testimony-arrow{
+    display: flex;
+    gap: 20px;
+}
+.arrowBtn{
+    cursor: pointer;
+}
+.arrowBtn:hover{
+    opacity: 0.6;
+}
+@media (max-width: 768px) {
+    .person-div{
+        flex-direction: column;
+        width:max-content;
+        align-items:flex-start;
+    }
+    .intestimonial-div{
+        gap:20px;
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    .testimonial-img{
+        width: 300px;
+    }
+    .testimony-div{
+        margin-left: 1rem;
+    }
+    .testimonial-div{
+        padding: 0 2rem;
+    }
+    .testimonial-h1{
+        font-size: 2rem;
+    }
+    .arrowBtn{
+        display: none;
+    }
+    .testimonial-div .v-Button{
+        display: block;
+    }
+}

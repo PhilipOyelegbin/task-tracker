@@ -1,0 +1,60 @@
+@font-face{
+    font-family:Inter;
+    src:url(../../Fonts/Inter[wght].ttf);
+}
+.project-h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 87px;
+    text-transform: capitalize;
+
+    color: #D9D0D0;
+}
+.projectDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:28%;
+    height:min-content;
+    gap: 10px;
+    margin:0;
+}
+.project-div{
+    display: flex;
+    width:100%;
+    gap:60px;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.project-h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #FFFFFF;
+    flex: none;
+    flex-grow: 0;
+    width: 100%;
+}
+.button-div {
+    display:flex;
+    gap:20px;
+}
+.button-div .buttons{
+    display: none;
+}
+@media (max-width: 768px) {
+    .projectDiv{
+        width: 100%;
+    }
+    .project-div{
+        flex-direction: column;
+        width: 100%;
+    }
+    .button-div .buttons{
+        display:inline-block;
+    }
+}
