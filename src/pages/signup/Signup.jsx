@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { HStack, Text, VStack } from "@chakra-ui/react"
 import { useState } from 'react';
+import { FaFacebook, FaGoogle, FaLinkedin } from "react-icons/fa"
 // import TGLogo  from '../../assets/TGLogo.jpg';
 import '../signup/signup.css'
 
@@ -48,8 +50,17 @@ const Signup = () => {
           <div className='input-box'>
             <button className='signup-btn' onClick={()=>navigate('/login')}>Sign Up</button>
           </div>
+          <Text fontWeight="semibold">OR</Text>
+            <VStack>
+                <Text py="3">Sign Up Using</Text>
+                <HStack gap="5" style={{cursor: 'pointer'}}>
+                    <FaGoogle/>
+                    <FaFacebook/>
+                    <FaLinkedin/>
+                </HStack>
+            </VStack>
           <div>
-            <p style={{fontSize: '0.9rem'}}>Already have an account ? <span style={{color:'#DD6B20', cursor:'pointer', fontWeight:'bold', fontSize: '0.9rem'}} onClick={()=>navigate('/login')}>Login</span></p>
+            <p style={{fontSize: '0.9rem', paddingTop:'1rem', }}>Already have an account ? <span style={{color:'#DD6B20', cursor:'pointer', paddingTop:'5px', fontWeight:'bold', fontSize: '0.9rem'}} onClick={()=>navigate('/login')}>Sign In</span></p>
           </div>
         </form>
       </div>
