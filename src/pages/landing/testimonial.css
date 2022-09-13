@@ -78,14 +78,16 @@
 @media (max-width: 768px) {
     .person-div{
         flex-direction: column;
-        width:max-content;
+        width:160px;
         align-items:flex-start;
+        
     }
     .intestimonial-div{
         gap:20px;
         width: 100%;
-        flex-direction: column;
-        
+        align-items: center;
+        flex-wrap:nowrap;
+        justify-content: center;
     }
     .testimonial-img{
         width: 300px;
@@ -94,15 +96,20 @@
         margin-left: 1rem;
     }
     .testimonial-div{
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
     .testimonial-h1{
         font-size: 2rem;
+        width:100%;
     }
     .arrowBtn{
         display: none;
     }
     .testimonial-div .v-Button{
         display: block;
+    }
+    .testimony{
+        font-size: 0.8rem;
+        width: 120px;
     }
 }

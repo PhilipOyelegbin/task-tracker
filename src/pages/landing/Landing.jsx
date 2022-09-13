@@ -1,4 +1,4 @@
-import Footer from "./Footer"
+
 import Hero from "./Hero"
 import NewsLetter from "./NewsLetter"
 import Projects from "./Projects"
@@ -13,7 +13,6 @@ const Landing = () => {
         <Projects/>
         <Testimonials/>
         <NewsLetter/>
-        <Footer/>
     </div>
   )
 }

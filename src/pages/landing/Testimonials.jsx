@@ -35,7 +35,7 @@ const Testimonials = () => {
 
         },
     ];
-    const renderTestiomonials= testimonials.map((testimony,index)=><div className='person-div' key={index}>
+    const renderTestiomonials= testimonials.map((testimony,index)=><div className= 'person-div' key={index}>
         <img className='testimonial-img' src={testimony.img} alt=''/>
         <div className='testimony-div'>
             <p className='testimony-name'>{testimony.name}</p>

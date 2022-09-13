@@ -1,20 +1,21 @@
+import React from'react'
 import { Button, Center, Flex, FormControl, FormLabel, Heading, HStack, Input, Text, VStack } from "@chakra-ui/react"
-import axios from "axios"
+//import axios from "axios"
 import { useEffect, useState } from "react"
 import { FaFacebook, FaGoogle, FaLinkedin } from "react-icons/fa"
 import { Link, useNavigate } from "react-router-dom"
 
 const Login = () => {
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
     const [user, setUser] = useState({email: "", password: ""});
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
         setLoading(true);
-        const logData = async () => {
+        /*const logData = async () => {
             try {
                 let loginData = {email: user.email, password: user.password};
                 await axios.post('/login', loginData)
@@ -28,8 +29,9 @@ const Login = () => {
             }
         }
         logData();
+        */
     };
-
+    
     const handleChange = (e) => {
         setUser({...user, [e.target.name] : e.target.value});
     };

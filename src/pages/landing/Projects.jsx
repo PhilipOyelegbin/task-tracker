@@ -38,6 +38,14 @@ const Projects = () => {
       title:`Event Plan`
     },
   ]
+  const moveRight= ()=>{
+    let projects = document.getElementById('projects');
+    projects.scrollLeft = projects.scrollLeft+300;
+  };
+  const moveLeft= ()=>{
+    let projects = document.getElementById('projects');
+    projects.scrollLeft = projects.scrollLeft-300;
+  }
   const renderProjects = projects.map((project,index)=><div className='projectDiv' key={index}>
     <img className='project-img' src={project.img} alt=''/>
     <p className='project-p'>{project.text}</p>
@@ -45,15 +53,15 @@ const Projects = () => {
     <Button bgColor={'#C9C0C0'}>Learn More</Button>
   </div>)
   return (
-    <div style={{margin:'3.5rem', display:'flex', flexDirection:'column', alignItems:'center', gap:'20px'}}>
+    <div className ='project-main'>
       <h1 className='project-h1'>Project Template For Businesses</h1>
-      <div className='project-div'>
+      <div id='projects' className='project-div'>
         {renderProjects}
       </div>
-      <Button>View More</Button>
+      <Button className='vMoreBtn'>View More</Button>
       <div className='button-div'>
-        <img className='buttons' src ={arrowLeft} alt=''/>
-        <img className='buttons' src ={arrowRight} alt =''/>
+        <img  onClick= {moveLeft} className='buttons' src ={arrowLeft} alt=''/>
+        <img onClick= {moveRight} className='buttons' src ={arrowRight} alt =''/>
         
       </div>
     </div>

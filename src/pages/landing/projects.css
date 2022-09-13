@@ -2,12 +2,18 @@
     font-family:Inter;
     src:url(../../Fonts/Inter[wght].ttf);
 }
+.project-main{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
 .project-h1{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 3rem;
-    line-height: 87px;
     text-transform: capitalize;
 
     color: #D9D0D0;
@@ -16,17 +22,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width:28%;
-    height:min-content;
+    width:334px;
+    height:auto;
     gap: 10px;
     margin:0;
 }
 .project-div{
     display: flex;
     width:100%;
-    gap:60px;
+    gap:40px;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 
 }
 .project-h2{
@@ -46,15 +53,43 @@
 .button-div .buttons{
     display: none;
 }
+
 @media (max-width: 768px) {
-    .projectDiv{
-        width: 100%;
+    .project-main .vMoreBtn{
+        display: none;
     }
-    .project-div{
-        flex-direction: column;
-        width: 100%;
+    .projectDiv{
+        width: 400px;
+        height: auto;
+    } 
+    .projectDiv::-webkit-scrollbar{
+        display:none;
+    }
+    .project-h1{
+        font-size:2rem;
+    }
+    .project-main .project-div{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        width:100%;
+        align-items: center;
+        justify-content: center;
     }
     .button-div .buttons{
         display:inline-block;
+    }
+    .buttons:hover{
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .project-img{
+        width: 300px;
+    }
+    .project-p{
+        width: 300px ;
+    }
+    .project-h2{
+        width: 300px;
+        font-size: 1.7rem;
     }
 }

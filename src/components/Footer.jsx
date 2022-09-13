@@ -1,9 +1,9 @@
 import { Button } from '@chakra-ui/react'
 import React from 'react'
-import fbIcon from '../../assets/fbicon.svg'
-import IGIcon from '../../assets/instagramicon.svg'
-import linkedInIcon from '../../assets/linkedinicon.svg'
-import youtubeIcon from '../../assets/youtube.svg'
+import fbIcon from '../assets/fbicon.svg'
+import IGIcon from '../assets/instagramicon.svg'
+import linkedInIcon from '../assets/linkedinicon.svg'
+import youtubeIcon from '../assets/youtube.svg'
  import './footer.css'
 const Footer = () => {
     const footerContents =[
