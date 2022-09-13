@@ -1,5 +1,4 @@
 import { Button } from '@chakra-ui/react'
-import React from 'react'
 import './projects.css'
 import IMG from '../../assets/cushion1.svg'
 import arrowLeft from '../../assets/arrowLeft.svg'

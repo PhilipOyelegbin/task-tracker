@@ -1,4 +1,3 @@
-import React from 'react'
 import personIcon from '../../assets/personicon.svg'
 import arrowLeft from '../../assets/arrowLeft.svg'
 import arrowRight from '../../assets/arrowRight.svg'
