@@ -1,4 +1,4 @@
-import personIcon from '../../assets/personicon.svg'
+import personIcon from '../../assets/person.svg'
 import arrowLeft from '../../assets/arrowLeft.svg'
 import arrowRight from '../../assets/arrowRight.svg'
 import './testimonial.css'

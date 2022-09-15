@@ -4,7 +4,7 @@ import { Button, Center, Flex, FormControl, FormLabel, Heading, HStack, Input, T
 import { useEffect, useState } from "react"
 import { FaFacebook, FaGoogle, FaLinkedin } from "react-icons/fa"
 import { Link, useNavigate } from "react-router-dom"
-
+import './login.css'
 const Login = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -41,24 +41,38 @@ const Login = () => {
     }, []);
     
   return (
-    <Flex py="5">
-        <Center flexDir="column" gap="5" mx="auto" bg="gray.400" w={["90%", "60%"]} rounded="lg" p="40px 20px">
+    <Flex bg="#f5f5f5" py="5">
+        <Center flexDir="column" gap="5" mx="auto" boxShadow={'-1px 2px 6px 0px rgba(0,0,0,0.75)'} bg="#f5f5f5" w={["100%", "100%", '30%']} rounded="lg" p="40px 20px">
             <VStack as="form" onSubmit={handleLogin} w="100%" gap="5">
-                <Heading alignSelf="self-start">Sign In</Heading>
+                <Heading alignSelf="center">Sign In</Heading>
                 <FormControl>
                     <FormLabel>Email Address</FormLabel>
-                    <Input variant='outline' name="email" value={user.email} onChange={handleChange} placeholder='Enter Email' size='md' required/>
+                    <input  
+                        className='emailInput'
+                        name="email" 
+                        value={user.email} 
+                        onChange={handleChange} 
+                        placeholder='Enter Email' 
+                        
+                    />
                 </FormControl>
                 <FormControl>
                     <FormLabel>Password</FormLabel>
-                    <Input variant='outline' name="password" value={user.password} onChange={handleChange} placeholder='8 Characters or more' size='md' required/>
+                    <input 
+                        className='passwordInput' 
+                        name="password" 
+                        value={user.password} 
+                        onChange={handleChange} 
+                        placeholder='8 Characters or more' 
+                        
+                    />
                 </FormControl>
 
                 {/* feedback message */}
                 {loading ? <Text>Loading...</Text> : error && <Text>{error}</Text>}
 
                 {/* sign in button */}
-                <Button colorScheme='orange' variant='solid' size='sm' p={["5px 30%", "5px 15%"]} my="10">Sign In</Button>
+                <Button colorScheme='orange' variant='solid' width={'100%'} size='sm' p={["5px 30%", "5px 15%"]} my="10">Sign In</Button>
             </VStack>
             <Text fontWeight="semibold">OR</Text>
             <VStack>
@@ -69,7 +83,7 @@ const Login = () => {
                     <FaLinkedin/>
                 </HStack>
             </VStack>
-            <Text>Are You A New Member? <Link to="/signup" style={{color: "blue"}}>Sign Up</Link></Text>
+            <Text>Are You A New Member? <Link to="/signup" style={{color: "#DD6B20",fontWeight:500}}>Sign Up</Link></Text>
         </Center>
     </Flex>
   )
