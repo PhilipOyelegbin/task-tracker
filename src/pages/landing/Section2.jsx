@@ -1,67 +1,56 @@
 import { Button, Heading, HStack, Image, Link as ChakraLink, VStack, Wrap } from "@chakra-ui/react";
-import {FaArrowRight} from 'react-icons/fa';
-import react from '../../assets/react.svg';
+import section2 from '../../assets/section2.svg';
+import star from '../../assets/star.svg';
+import team1 from '../../assets/team1.svg';
+import caretRight from '../../assets/caret-right.svg';
+import team2 from '../../assets/team2.svg';
 
 const Section2 = () => {
   return (
     <>
-        <VStack py="10" px="2">
-            <Wrap p={["10px", "20px 40px"]} justify="center" gap="5" align="center">
-                <VStack w={["full", "full", "30%"]}>
-                    <Heading>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, aliquam.</Heading>
-                </VStack>
-                <VStack w={["full", "full", "30%"]}>
-                    <Heading fontSize="24px">Work How You Want</Heading>
-                    <p style={{fontSize: "18px"}}>Whether You're Working From Home,At The Office Or At The Job Sites,We Provide Flexible Tools So You Can Connect And Collaborate On Waterfall Projects, Agile Projects And Everything In Between</p>
-                </VStack>
-                <VStack w={["full", "full", "30%"]}>
-                    <Heading fontSize="24px">Manage Budget And Resources</Heading>
-                    <p style={{fontSize: "18px"}}>Gain Hidden Insights Into The Progress And Profitability Of Your Projects With Real-Time Budget And Resource Tracking. Adjust Schedules And Workload Allocation To Quickly Pivot And Reach Goals.</p>
-                </VStack>
-            </Wrap>
-
-            <HStack p={["10px", "20px 40px"]} flexDir={["column-reverse", "column-reverse", "row"]} justify="center" gap="5" align="center">
-                <VStack w={["full", "full", "60%"]}>
-                    <Image src={react} mx="auto" w="300" h="300"></Image>
-                </VStack>
-                <VStack w={["full", "full", "35%"]}>
-                    <Heading fontSize="24px">Get The Reports You Need</Heading>
-                    <p style={{fontSize: "18px"}}>Gain Hidden Insights Into The Progress And Profitability Of Your Projects With Real-Time Budget And Resource Tracking. Adjust Schedules And Workload Allocation To Quickly Pivot And Reach Goals.</p>
-                </VStack>
-            </HStack>
-
+        <VStack py="10" px="2" bgColor={'#F2F2F2'}>
             <VStack>
-                <Image src={react} p="5" w="100" h="100"/>
+                <Image src={star} p="5" w="100" h="100"/>
             </VStack>
 
-            <Heading textAlign="center">Software Built For Remote And Hybrid Team</Heading>
-            <HStack p={["10px", "20px 40px"]} flexDir={["column-reverse", "column-reverse", "row"]} justify="center" gap="5" align="center">
-                <VStack w={["full", "full", "35%"]}>
-                    <Heading fontSize="24px">Get The Reports You Need</Heading>
-                    <p style={{fontSize: "18px"}}>Gain Hidden Insights Into The Progress And Profitability Of Your Projects With Real-Time Budget And Resource Tracking. Adjust Schedules And Workload Allocation To Quickly Pivot And Reach Goals.</p>
-                    <HStack alignSelf="self-start" justifyContent="space-between"minW="100%">
-                        <p>Get Started</p>
-                        <FaArrowRight/>
+            <Heading color={'#003F7D'} textAlign="center" fontSize={['1.5rem','1.6rem','2rem']}>Software Built For Remote And Hybrid Team</Heading>
+            
+            <HStack p={["10px", "20px 40px"]}  h={['550px','700px','500px']}  flexDir={["column", "column", "row"]} justify={['flex-start','flex-start',"center"]}>
+                <Image src={section2}  w={['400','600',"400"]} h={['400','600',"400"]}></Image>
+                <VStack w={["95%", "95%", "35%"]}>
+                    <Heading alignSelf={'flex-start'} color={'black'} fontSize="24px">Get The Reports You Need</Heading>
+                    <p style={{fontSize: "12px", color:'black'}}>Gain hidden insights into the progress and profitability of your projects with real-time budget and resource tracking. Adjust schedules and workload allocation to quickly pivot and reach goals.nd resource tracking. Adjust schedules and workload allocation to quickly pivot and reach goals.Gand workload allocation to quickly pivot and reach goals.</p>
+                    <HStack as={'button'} p={'1rem'} border={'1px solid'} height={'40px'} borderRadius={'4px'} borderColor={'#FF5004'} alignSelf="self-start" justifyContent="space-between"w="200px">
+                        <p style={{ fontSize:'0.8rem', color:' #FF5004'}}>Get Started</p>
+                        <img style={{width:'6px'}} src={caretRight}/>
                     </HStack>
-                </VStack>
-                <VStack w={["full", "full", "60%"]}>
-                    <Image src={react} mx="auto" w="300" h="300"></Image>
                 </VStack>
             </HStack>
-            <Wrap p={["10px", "20px 40px"]} justify="center" gap="5" align="center">
-                <VStack w={["full", "full", "60%"]}>
-                    <Image src={react} mx="auto" w="300" h="300"></Image>
-                </VStack>
-                <VStack w={["full", "full", "35%"]}>
-                    <Heading fontSize="24px">Collaborative To The Core</Heading>
-                    <p style={{fontSize: "18px"}}>Gain Hidden Insights Into The Progress And Profitability Of Your Projects With Real-Time Budget And Resource Tracking. Adjust Schedules And Workload Allocation To Quickly Pivot And Reach Goals.</p>
-                    <HStack alignSelf="self-start" justify="space-between" minW="100%">
-                        <p>Get Started</p>
-                        <FaArrowRight/>
+
+            <HStack  p={["10px", "20px 40px"]}  h={['550px','700px','500px']} flexDir={["column-reverse", "column-reverse", "row"]} justify="center" gap="1" align="center">
+                <VStack w={["95%", "95%", "35%"]}>
+                    <Heading alignSelf={'flex-start'} color={'black'} fontSize="24px">Get The Reports You Need</Heading>
+                    <p style={{fontSize: "12px", color:'black'}}>Gain hidden insights into the progress and profitability of your projects with real-time budget and resource tracking. Adjust schedules and workload allocation to quickly pivot and reach goals.nd resource tracking. Adjust schedules and workload allocation to quickly pivot and reach goals.Gand workload allocation to quickly pivot and reach goals.</p>
+                    <HStack as={'button'} p={'1rem'} border={'1px solid'} height={'40px'} borderRadius={'4px'} borderColor={'#FF5004'} alignSelf="self-start" justifyContent="space-between"w="200px">
+                        <p style={{ fontSize:'0.8rem', color:' #FF5004'}}>Get Started</p>
+                        <img style={{width:'6px'}} src={caretRight}/>
                     </HStack>
                 </VStack>
-            </Wrap>
-            <Button colorScheme='orange' variant='solid' size='sm' p={["10px 20px", "10px 50px"]}><ChakraLink textAlign="center" _hover="none" href="">Learn More About The Product</ChakraLink></Button>
+                <Image src={team1} w={['400','600',"400"]} h={['400','600',"400"]}></Image>
+            </HStack>
+
+            <HStack p={["10px", "20px 40px"]} h={['550px','700px','500px']} mb={'5'} flexDir={["column", "column", "row"]} justify="center" gap={['1','1','5','5']} align="center">
+                <Image src={team2}  w={['400','600',"400"]} h={['400','600',"400"]}></Image>
+                <VStack w={["95%", "95%", "35%"]}>
+                    <Heading color={'black'} fontSize="24px" alignSelf={'flex-start'}>Collaborative To The Core</Heading>
+                    <p style={{fontSize: "12px", color:'black'}}>Gain hidden insights into the progress and profitability of your projects with real-time budget and resource tracking. Adjust schedules and workload allocation to quickly pivot and reach goals.nd resource tracking. Adjust schedules and workload allocation to quickly pivot and reach goals.Gand workload allocation to quickly pivot and reach goals.</p>
+                    <HStack as={'button'} p={'1rem'} border={'1px solid'} height={'40px'} borderRadius={'4px'} borderColor={'#FF5004'} alignSelf="self-start" justifyContent="space-between" w="200px">
+                        <p style={{ fontSize:'0.8rem', color:' #FF5004'}}>Get Started </p>
+                        <img style={{width:'6px'}} src={caretRight}/>
+                    </HStack>
+                </VStack>
+            </HStack>
+
         </VStack>
     </>
   )

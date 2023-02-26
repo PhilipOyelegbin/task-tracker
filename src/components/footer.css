@@ -1,5 +1,5 @@
 .footer{
-    background-color:hsl(0, 10%, 68%);
+    background-color:#ffff;
     
     padding: 4rem;
     display: flex;
@@ -20,7 +20,7 @@
     font-weight: 500;
     font-size: 18px;
     text-transform: capitalize;
-    color: #000000;
+    color: #FF5004;
 }
 .list-div{
     display: flex;
@@ -39,7 +39,7 @@
     font-size: 1.5rem;
     text-transform: capitalize;
 
-    color: #1E1E1E;
+    color: #003F7D;
 }
 @media (max-width: 768px) {
     .footer-div{

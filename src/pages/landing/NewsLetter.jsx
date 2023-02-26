@@ -8,7 +8,7 @@ const NewsLetter = () => {
         <p className='newsLetter-p'>want to receive updates about our pricings and new service? Signup with your email address. No spamming!</p>
         <div className='input-div'>
             <input className='input' placeholder='Enter Email address'/>
-            <Button bgColor={'#D9D0D0'} className='button'>Sign Up</Button>
+            <Button bgColor={'#D9D0D0'} color={'#003F7D'} className='button'>Sign Up</Button>
         </div>
     </div>
   )

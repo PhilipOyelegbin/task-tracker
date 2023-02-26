@@ -4,14 +4,16 @@
     font-weight: 500;
     font-size: 3rem;
     text-transform: capitalize;
-    color: #D9D0D0;
+    color: #F2F2F2;
 }
 .newsLetter-div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8rem;
-    padding-bottom: 10rem;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    background-color: #021528;
 }
 .newsLetter-p{
     width:50%;
@@ -20,8 +22,7 @@
     font-size: 1rem;
     text-align: center;
     text-transform: capitalize;
-
-    color: #D9D0D0;
+    color: #F2F2F2;
 }
 .input-div{
     display:flex;
@@ -29,11 +30,10 @@
     width:80%;
     align-self: center;
     margin: 1rem;
-
 }
 .input-div .input{
     width:80%;
-    border: 1px solid #D9D0D0;
+    border: 1px solid #F2F2F2;
     border-radius: 4px;
     padding: 0.5rem 1rem ;
     background-color: transparent;

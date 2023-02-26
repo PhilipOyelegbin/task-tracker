@@ -1,4 +1,7 @@
-import personIcon from '../../assets/person.svg'
+import person1 from '../../assets/testimonial1.svg'
+import person2 from '../../assets/testimonial2.svg'
+import person3 from '../../assets/testtimonial3.svg'
+import person4 from '../../assets/person.svg'
 import arrowLeft from '../../assets/arrowLeft.svg'
 import arrowRight from '../../assets/arrowRight.svg'
 import './testimonial.css'
@@ -6,28 +9,49 @@ import { Button } from '@chakra-ui/react'
 const Testimonials = () => {
     const testimonials =[
         {
-            img:personIcon,
+            img:person1,
+            name:'Mitchelle Abu',
+            position:'Project Manager',
+            text:'Access the same project through five different dynamic views: a kanban board, Gantt chart, spreadsheet, calendar or simple task list',
+
+        },
+        {
+            img:person2,
+            name:'Kathryn Murphy',
+            position:'President Of Sales',
+            text:'Access the same project through five different dynamic views: a kanban board, Gantt chart, spreadsheet, calendar or simple task list',
+
+        },
+        {
+            img:person3,
+            name:'Markhy Abu',
+            position:'Project Manager',
+            text:'Access the same project through five different dynamic views: a kanban board, Gantt chart, spreadsheet, calendar or simple task list',
+
+        },
+        {
+            img:person1,
             name:'Mike Abu',
             position:'Project Manager',
             text:'Access the same project through five different dynamic views: a kanban board, Gantt chart, spreadsheet, calendar or simple task list',
 
         },
         {
-            img:personIcon,
+            img:person1,
             name:'Mike Abu',
             position:'Project Manager',
             text:'Access the same project through five different dynamic views: a kanban board, Gantt chart, spreadsheet, calendar or simple task list',
 
         },
         {
-            img:personIcon,
+            img:person1,
             name:'Mike Abu',
             position:'Project Manager',
             text:'Access the same project through five different dynamic views: a kanban board, Gantt chart, spreadsheet, calendar or simple task list',
 
         },
         {
-            img:personIcon,
+            img:person1,
             name:'Mike Abu',
             position:'Project Manager',
             text:'Access the same project through five different dynamic views: a kanban board, Gantt chart, spreadsheet, calendar or simple task list',
@@ -51,11 +75,6 @@ const Testimonials = () => {
         let testimonies = document.getElementById('testimonies');
         testimonies.scrollLeft = testimonies.scrollLeft +380
     };
-    /*
-    const [y,setY]  = useState(334);
-    const viewMore = ()=>{
-
-    };*/
   return (
     <div className='testimonial-div'>
         <h1 className='testimonial-h1'>What Our Users Are Saying</h1>
@@ -67,7 +86,7 @@ const Testimonials = () => {
             <img className='arrowBtn' style={{cursor:'pointer'}} onClick={moveLeft} src={arrowLeft} alt='left arrow'/>
             <img className='arrowBtn' onClick={moveRight} src={arrowRight} alt='right arrow'/>
         </div>
-        <Button className='v-Button'>View More</Button>
+        
     </div>
   )
 }
